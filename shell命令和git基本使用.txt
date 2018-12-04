@@ -1,0 +1,88 @@
+shell 命令
+cd 命令  目录跳转       ./ 当前文件夹    ../上级  
+cd  d: 跳转到d盘        cd ~ 跳转到用户主目录
+ls 命令  查看当前文件夹下的所有内容    参数 -a 也可以查看隐藏文件
+pwd  查看当前所处位置
+
+mkdir a  在当前目录下创建一个a文件夹
+
+touch index.html  在当前目录下创建一个index.html文件必须带后缀名
+
+rm 文件名 删除当前目录下的文件  参数  -r 可以删除文件夹  -f强制删除    多个参数可以  -rf 
+  rm -rf ./* 删除当前目录下的所有文件以及文件夹
+
+ctrl + c 取消命令
+
+clear 命令
+
+cat 文件  查看当前目录下该文件的内容
+
+cp 拷贝命令   cp 文件 目录   将该文件拷贝到目录下  参数 -r 可以拷贝文件夹
+  cp 文件  名     拷贝后重命名
+
+mv 移动命令   mv 文件|文件夹 目录  将该文件或文件夹移动到目录下
+  mv 文件|文件夹 名    重命名
+
+rm  cp   cat  cd  
+
+
+
+
+git 操作
+
+生成秘钥  用于和github链接
+在命令行中  执行  ssh-keygen
+进入到用户主目录下   cd ~  
+再进入到 .ssh 文件夹下   cd .ssh
+使用 cat 命令查看公钥  cat id_rsa.pub 复制里面的文本 
+打开 github 网站点击用户下面的 settings  SSH and GPG keys
+添加 ssh即可
+
+
+克隆网上的仓库到本地  
+点击仓库下的绿色按钮  clone or download  选择 http 地址
+打开命令行 跳转到某个目录(房项目的文件夹)下   
+执行  git clone 地址 命令    --->  将网上的项目克隆到了本地
+
+使用编辑器打开该项目进行编辑   修改html文件
+我们想要将修改的内容让 git 记录 
+只有在 git 仓库内才能对该仓库进行操作
+1.进入到仓库的文件夹下
+2.git add 修改的文件名(.代表所有修改的文件) ---> 将对仓库内文件的修改让远端 git 记录
+3.git commit -m'版本信息(此次修改的标题)' ---> 将此次修改做成一个 git 版本，方便 git 记录。
+  *** 第一次使用 git 时候做版本会失败,因为 git 不知道你是谁，
+  使用 
+    git config --global user.name "git用户名" 
+    git config --global user.email "git邮箱"
+  告诉 git 你是谁。
+  再次执行  git commit 
+  ***
+4.git push 将我们的修改提交到远端
+
+假如配置个人信息失败 如何修改 再次执行上面的 配置语句 也可以去 用户主目录下  .gitconfig 文件
+
+git 三部曲  git add .     git commit -m''    git push
+
+本地建好的项目 想储存到git git远端没有仓库
+1.git远端 新建一个同名仓库 里面什么都不放（初始化的时候不要添加 README.md）
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
